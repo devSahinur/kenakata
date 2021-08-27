@@ -19,9 +19,8 @@ const Signin = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
-                   
                     <Button variant="primary" type="submit">
-                        Submit
+                        Sign In
                     </Button>
                 </Form>
                </Col>

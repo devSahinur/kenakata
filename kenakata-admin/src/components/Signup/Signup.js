@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import Input from '../Input/Input';
 
 const Signup = () => {
     return (
@@ -7,6 +8,19 @@ const Signup = () => {
         <Row className='mt-5'>
             <Col md={{span:6, offset: 3}}>
              <Form>
+                    <Row>
+                        <Col md={6}>
+                            <Input 
+                                label='First Name'
+                            />
+                        </Col>
+                        <Col md={6}>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Last Name</Form.Label>
+                                <Form.Control type="text" placeholder="Last Name" />
+                            </Form.Group>
+                        </Col>
+                    </Row>
                  <Form.Group className="mb-3" controlId="formBasicEmail">
                      <Form.Label>Email address</Form.Label>
                      <Form.Control type="email" placeholder="Enter email" />
@@ -21,7 +35,7 @@ const Signup = () => {
                  </Form.Group>
                 
                  <Button variant="primary" type="submit">
-                     Submit
+                     Sign Up
                  </Button>
              </Form>
             </Col>
