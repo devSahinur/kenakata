@@ -1,12 +1,12 @@
 const express = require("express")
 const env = require('dotenv')
 const app = express();
-const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
 
 //routes
 const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin/auth');
+const categoryRouters = require('./routes/category');
 
 
 // environment variable or you can say constants
@@ -24,9 +24,10 @@ mongoose.connect(
 });
 
 // middleware
-app.use(bodyParser());
+app.use(express.json());
 app.use('/api', authRoutes);
 app.use('/api', adminRoutes);
+app.use('/api', categoryRouters);
 
 
 app.listen(process.env.PORT, () => {
