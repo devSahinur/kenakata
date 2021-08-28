@@ -7,6 +7,7 @@ const mongoose = require("mongoose")
 const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin/auth');
 const categoryRouters = require('./routes/category');
+const productRouters = require('./routes/product');
 
 
 // environment variable or you can say constants
@@ -28,6 +29,7 @@ app.use(express.json());
 app.use('/api', authRoutes);
 app.use('/api', adminRoutes);
 app.use('/api', categoryRouters);
+app.use('/api', productRouters);
 
 
 app.listen(process.env.PORT, () => {
