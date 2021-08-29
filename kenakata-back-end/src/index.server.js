@@ -8,6 +8,7 @@ const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin/auth');
 const categoryRouters = require('./routes/category');
 const productRouters = require('./routes/product');
+const cartRouters = require('./routes/cart');
 
 
 // environment variable or you can say constants
@@ -30,6 +31,7 @@ app.use('/api', authRoutes);
 app.use('/api', adminRoutes);
 app.use('/api', categoryRouters);
 app.use('/api', productRouters);
+app.use('/api', cartRouters);
 
 
 app.listen(process.env.PORT, () => {

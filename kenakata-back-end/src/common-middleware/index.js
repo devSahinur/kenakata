@@ -14,7 +14,7 @@ exports.requireSignin = (req, res, next) => {
 
 
 exports.userMiddleware = (req, res, next) => {
-    
+    next()
 };
 
 
